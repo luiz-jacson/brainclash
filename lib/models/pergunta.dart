@@ -1,4 +1,4 @@
-import 'package:api/categoria.dart';
+import 'categoria.dart';
 
 class Pergunta {
   String _questao;

@@ -1,5 +1,5 @@
-import 'package:api/categoria.dart';
-import 'package:api/pergunta.dart';
+import 'categoria.dart';
+import 'pergunta.dart';
 
 class Quiz {
   int acertos = 0;
