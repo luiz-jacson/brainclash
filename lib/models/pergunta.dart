@@ -1,13 +1,22 @@
 import 'categoria.dart';
 
 class Pergunta {
+  int _idPergunta;
   String _questao;
   List<String> _respostas;
   String _respostaCorreta;
-  List<Categoria> _categorias;
+  int _idCategoria;
 
 
-  Pergunta(this._questao, this._respostas, this._respostaCorreta, this._categorias);
+  Pergunta(this._idPergunta ,this._questao, this._respostas, this._respostaCorreta, this._idCategoria);
+
+  int getIdPergunta(){
+    return _idPergunta;
+  }
+
+  setIdPergunta(int idPergunta){
+    _idPergunta = idPergunta;
+  }
 
   String getQuestao(){
     return _questao;
@@ -25,12 +34,12 @@ class Pergunta {
     _respostas = respostas;
   }
 
-  List<Categoria> getCategorias(){
-    return _categorias;
+  int getCategorias(){
+    return _idCategoria;
   }
 
-  setCategorias(List<Categoria> categorias){
-    _categorias = categorias;
+  setCategorias(int categoria){
+    _idCategoria = categoria;
   }
 
   String getRespostaCorreta(){
