@@ -17,7 +17,7 @@ class CategoriaService {
 
   Future<Categoria> getCategoriaAleatoria() async {
     Response response = await get(
-      Uri.parse(ApiConfig.getUrl()),
+      Uri.parse(ApiConfig.getUrlCategorias()),
       headers: _headers,
     );
     Map<String, dynamic> mapResponse = json.decode(response.body);
@@ -28,8 +28,9 @@ class CategoriaService {
       Categoria categoriaObj = Categoria(categoria["nome"], categoria["idCategoria"]);
        listRandom.add(categoriaObj);
     }
-    
-    return (listRandom[gerarNumeroAleatorio(listRandom.length)]);
+    int num = gerarNumeroAleatorio(listRandom.length);
+    print("${listRandom[num].getIdCategoria()} , ${listRandom[num].getNome()}");
+    return (listRandom[num]);
     
   }
 }
