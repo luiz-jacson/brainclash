@@ -26,7 +26,7 @@ class Pergunta {
     _questao = questao;
   }
 
-  List<String> getRespostas(List<String> respostas){
+  List<String> getRespostas(){
     return _respostas;
   }
 

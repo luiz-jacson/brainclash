@@ -21,5 +21,16 @@ class Categoria {
     _idCategoria = _idCategoria;
   }
 
+  Map<String, dynamic> toMap() {
+    return {"idCategoria": _idCategoria, "nome": _nome};
+  }
+
+  factory Categoria.fromMap(Map<String, dynamic> map) {
+    return Categoria(
+      map["nome"],
+      map["idCategoria"]
+    );
+  }
+
 }
 

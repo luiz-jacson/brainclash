@@ -37,9 +37,6 @@ class PerguntaService {
       }
     }
     int num = gerarNumeroAleatorio(listRandom.length);
-    print(
-      "${listRandom[num].getIdPergunta()} , ${listRandom[num].getQuestao()}",
-    );
     return (listRandom[num]);
   }
 }
