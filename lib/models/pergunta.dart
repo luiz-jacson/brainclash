@@ -1,5 +1,3 @@
-import 'categoria.dart';
-
 class Pergunta {
   int _idPergunta;
   String _questao;
